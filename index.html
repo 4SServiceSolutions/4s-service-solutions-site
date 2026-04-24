@@ -3,306 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4S Service Solutions | Robotics & Janitorial Technology Consulting</title>
-  <meta name="description" content="4S Service Solutions helps janitorial and facility service teams integrate robotics, improve operational workflows, and support successful technology adoption." />
+  <title>4S Service Solutions</title>
+
   <style>
-    :root {
-      --navy: #12263a;
-      --blue: #1f6f8b;
-      --light: #f6f8fb;
-      --gray: #5f6b76;
-      --white: #ffffff;
-      --border: #dde4ec;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--navy);
-      background: var(--white);
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #1a2a3a;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
     }
 
     .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
     }
 
     header {
-      border-bottom: 1px solid var(--border);
-      background: var(--white);
+      border-bottom: 1px solid #eee;
+      background: white;
     }
 
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 0;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       font-size: 14px;
-      color: var(--gray);
+      color: #666;
+    }
+
+    .nav-links a {
+      color: #666;
     }
 
     .hero {
-      background: linear-gradient(135deg, #12263a 0%, #1f6f8b 100%);
-      color: var(--white);
-      padding: 88px 0;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #12263a, #1f6f8b);
+      color: white;
     }
 
-    .hero-content {
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-      margin-bottom: 16px;
-      opacity: 0.9;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: 48px;
-      line-height: 1.12;
-      margin-bottom: 22px;
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      line-height: 1.15;
     }
 
     .hero p {
-      font-size: 19px;
-      max-width: 680px;
-      opacity: 0.95;
-      margin-bottom: 32px;
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .button {
       display: inline-block;
-      background: var(--white);
-      color: var(--navy);
-      padding: 13px 22px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 15px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: white;
+      color: #12263a;
+      font-weight: bold;
+      border-radius: 6px;
     }
 
     section {
-      padding: 72px 0;
-    }
-
-    .section-light {
-      background: var(--light);
+      padding: 60px 20px;
     }
 
     .section-title {
-      font-size: 34px;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
     .section-intro {
-      max-width: 760px;
-      color: var(--gray);
-      font-size: 18px;
-      margin-bottom: 34px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .light-section {
+      background: #f6f8fb;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 26px;
-      min-height: 210px;
-    }
-
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
+      background: white;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     .card p {
-      color: var(--gray);
-      font-size: 15.5px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-      align-items: start;
-    }
-
-    .list {
-      list-style: none;
-      display: grid;
-      gap: 14px;
-      color: var(--gray);
-    }
-
-    .list li {
-      padding-left: 22px;
-      position: relative;
-    }
-
-    .list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 700;
+      color: #666;
+      line-height: 1.6;
     }
 
     .contact-box {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 16px;
-      padding: 34px;
-    }
-
-    .contact-box h2 {
-      font-size: 30px;
-      margin-bottom: 14px;
-    }
-
-    .contact-box p {
-      margin-bottom: 10px;
-      opacity: 0.95;
+      background: #12263a;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
     }
 
     .contact-box a {
+      color: white;
       text-decoration: underline;
     }
 
     footer {
-      padding: 28px 0;
-      border-top: 1px solid var(--border);
-      color: var(--gray);
-      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      border-top: 1px solid #eee;
     }
 
-    @media (max-width: 850px) {
-      h1 {
-        font-size: 38px;
-      }
-
-      .grid,
-      .two-col {
+    @media (max-width: 800px) {
+      .grid {
         grid-template-columns: 1fr;
       }
 
       .nav {
-        align-items: flex-start;
-        gap: 16px;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
       }
 
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 14px;
+      .hero h1 {
+        font-size: 34px;
       }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">4S Service Solutions</div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+<header>
+  <div class="container nav">
+    <div>
+      <img src="logo11.png" alt="4S Service Solutions Logo" style="height:50px;">
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="eyebrow">Facility Services | Robotics Support | Operations Consulting</div>
-        <h1>Practical support for modern facility operations.</h1>
-        <p>4S Service Solutions helps facility service teams evaluate, deploy, and support cleaning technology in real-world operating environments.</p>
-        <a class="button" href="mailto:cole.settem@4s-service-solutions.com">Contact Us</a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <h1>Practical support for modern facility operations.</h1>
+    <p>
+      4S Service Solutions helps facility service teams evaluate, deploy, and support cleaning technology in real-world operating environments.
+    </p>
+    <a class="button" href="mailto:cole.settem@4s-service-solutions.com">Contact Us</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p class="section-intro">
+      4S Service Solutions is a privately held service and consulting company focused on helping janitorial and facility teams adapt to a technology-driven industry.
+    </p>
+  </div>
+</section>
+
+<section id="services" class="light-section">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-intro">
+      Focused on practical implementation, operations alignment, and performance visibility.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Robotics Deployment Support</h3>
+        <p>Site readiness, workflow planning, and launch support.</p>
       </div>
-    </section>
 
-    <section id="about">
-      <div class="container two-col">
-        <div>
-          <h2 class="section-title">About Us</h2>
-          <p class="section-intro">4S Service Solutions is a privately held service and consulting company focused on helping janitorial and facility teams adapt to a technology-driven industry.</p>
-        </div>
-        <div class="card">
-          <h3>Our Focus</h3>
-          <p>We support the connection between people, process, and technology so new tools can be adopted with less disruption and clearer expectations.</p>
-        </div>
+      <div class="card">
+        <h3>Operations Consulting</h3>
+        <p>Workflow alignment, team adoption, and process improvement.</p>
       </div>
-    </section>
 
-    <section id="services" class="section-light">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <p class="section-intro">Our work is centered on practical implementation support, field communication, and performance visibility.</p>
-        <div class="grid">
-          <div class="card">
-            <h3>Robotics Deployment Support</h3>
-            <p>Site readiness, workflow planning, launch support, route review, and operational handoff.</p>
-          </div>
-          <div class="card">
-            <h3>Operations Consulting</h3>
-            <p>Support for janitorial workflows, team adoption, communication, and process improvement.</p>
-          </div>
-          <div class="card">
-            <h3>Performance Review</h3>
-            <p>Review of utilization, coverage, productivity trends, and barriers affecting successful adoption.</p>
-          </div>
-        </div>
+      <div class="card">
+        <h3>Performance Review</h3>
+        <p>Utilization, coverage, and productivity insights.</p>
       </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <h2>Contact Us</h2>
-          <p>For inquiries related to facility operations, robotics deployment support, or technology adoption, please reach out by email.</p>
-          <p><a href="mailto:cole.settem@4s-service-solutions.com">cole.settem@4s-service-solutions.com</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> 4S Service Solutions. All rights reserved.
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<section id="contact">
+  <div class="container contact-box">
+    <h2>Contact</h2>
+    <p>For inquiries, please reach out via email.</p>
+
+    <p>
+      <a href="mailto:cole.settem@4s-service-solutions.com">
+        cole.settem@4s-service-solutions.com
+      </a>
+    </p>
+
+    <p><strong>Business Hours:</strong> Monday–Friday, 9:00 AM–5:00 PM</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> 4S Service Solutions
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
