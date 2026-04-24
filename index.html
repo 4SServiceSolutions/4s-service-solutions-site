@@ -6,24 +6,29 @@
   <title>4S Service Solutions</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      color: #1a2a3a;
+    :root {
+      --navy: #12263a;
+      --blue: #1f6f8b;
+      --light: #f6f8fb;
+      --gray: #5f6b76;
+      --white: #ffffff;
+      --border: #dde4ec;
     }
 
-    a {
-      text-decoration: none;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      color: var(--navy);
     }
 
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
     header {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border);
       background: white;
     }
 
@@ -31,35 +36,43 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 18px 0;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      gap: 24px;
       font-size: 14px;
-      color: #666;
+      color: var(--gray);
     }
 
     .nav-links a {
-      color: #666;
+      text-decoration: none;
+      color: var(--gray);
+    }
+
+    /* LOGO BELOW NAV */
+    .logo-center {
+      text-align: center;
+      padding-bottom: 10px;
     }
 
     .hero {
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #12263a, #1f6f8b);
+      background: linear-gradient(135deg, #12263a 0%, #1f6f8b 100%);
       color: white;
+      padding: 80px 0;
+      text-align: center;
     }
 
     .hero h1 {
       font-size: 40px;
       margin-bottom: 20px;
-      line-height: 1.15;
     }
 
     .hero p {
       max-width: 600px;
+      margin: 0 auto;
       font-size: 18px;
-      line-height: 1.6;
     }
 
     .button {
@@ -70,10 +83,11 @@
       color: #12263a;
       font-weight: bold;
       border-radius: 6px;
+      text-decoration: none;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 60px 0;
     }
 
     .section-title {
@@ -82,13 +96,12 @@
     }
 
     .section-intro {
-      color: #666;
+      color: var(--gray);
       margin-bottom: 30px;
-      line-height: 1.6;
     }
 
-    .light-section {
-      background: #f6f8fb;
+    .section-light {
+      background: var(--light);
     }
 
     .grid {
@@ -99,18 +112,13 @@
 
     .card {
       background: white;
-      border: 1px solid #eee;
+      border: 1px solid var(--border);
       padding: 20px;
       border-radius: 10px;
     }
 
-    .card p {
-      color: #666;
-      line-height: 1.6;
-    }
-
     .contact-box {
-      background: #12263a;
+      background: var(--navy);
       color: white;
       padding: 30px;
       border-radius: 10px;
@@ -125,22 +133,12 @@
       text-align: center;
       padding: 20px;
       color: #777;
-      border-top: 1px solid #eee;
+      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 800px) {
+    @media(max-width: 800px) {
       .grid {
         grid-template-columns: 1fr;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
       }
     }
   </style>
@@ -149,17 +147,22 @@
 <body>
 
 <header>
+
   <div class="container nav">
-    <div>
-      <img src="logo11.png" alt="4S Service Solutions Logo" style="height:50px;">
-    </div>
+    <div></div>
 
     <nav class="nav-links">
-      <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
+
+  <!-- CENTERED LOGO BELOW NAV -->
+  <div class="logo-center">
+    <img src="logo11.png" alt="4S Service Solutions Logo" style="height:90px;">
+  </div>
+
 </header>
 
 <main>
@@ -174,16 +177,7 @@
   </div>
 </section>
 
-<section id="about">
-  <div class="container">
-    <h2 class="section-title">About</h2>
-    <p class="section-intro">
-      4S Service Solutions is a privately held service and consulting company focused on helping janitorial and facility teams adapt to a technology-driven industry.
-    </p>
-  </div>
-</section>
-
-<section id="services" class="light-section">
+<section id="services" class="section-light">
   <div class="container">
     <h2 class="section-title">Services</h2>
     <p class="section-intro">
@@ -206,6 +200,15 @@
         <p>Utilization, coverage, and productivity insights.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="container">
+    <h2 class="section-title">Approach</h2>
+    <p class="section-intro">
+      Successful adoption requires alignment between facility conditions, workflows, and team execution.
+    </p>
   </div>
 </section>
 
